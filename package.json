@@ -1,0 +1,19 @@
+{
+  "name": "prisma",
+  "version": "1.0.0",
+  "description": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "rizqi",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@prisma/client": "^5.11.0",
+    "express": "^4.19.2",
+    "prisma": "^5.11.0"
+  }
+}
