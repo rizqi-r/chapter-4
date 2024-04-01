@@ -52,7 +52,7 @@ async function createAccount(req, res, next) {
 
         const newAccount = await prisma.bank_Account.create({
             data: {
-                usersId: Number(body.id),
+                usersId: body.id,
                 balance: 100000,
                 bank_name: body.bank,
                 bank_account_number: Math.floor(
