@@ -63,17 +63,17 @@ async function createTransaction(req, res, next) {
 
         const sourceBalance = await prisma.bank_Account.findUnique({
             where: {
-                id: Number(body.source)
+                id: body.source
             }
         });
 
         const destinationBalance = await prisma.bank_Account.findUnique({
             where: {
-                id: Number(body.destination)
+                id: body.destination
             }
         });
 
-        if (sourceBalance - Number(body.amount) < 0) {
+        if (sourceBalance - body.amount < 0) {
             return res.status(400).json({
                 status: 400,
                 message: "Saldo Tidak Cukup"
@@ -82,25 +82,25 @@ async function createTransaction(req, res, next) {
 
         const newTransaction = await prisma.transaction.create({
             data: {
-                amount: Number(body.amount),
-                source_account_id: Number(body.source),
-                destination_account_id: Number(body.destination)
+                amount: body.amount,
+                source_account_id: body.source,
+                destination_account_id: body.destination
             }
         }).then(async () => {
             await prisma.bank_Account.update({
                 data: {
-                    balance: sourceBalance.balance - Number(body.amount)
+                    balance: sourceBalance.balance - body.amount
                 },
                 where: {
-                    id: Number(body.source)
+                    id: body.source
                 }
             }).then(async () => {
                 await prisma.bank_Account.update({
                     data: {
-                        balance: destinationBalance.balance + Number(body.amount)
+                        balance: destinationBalance.balance + body.amount
                     },
                     where: {
-                        id: Number(body.destination)
+                        id: body.destination
                     }
                 });
             });
