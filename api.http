@@ -12,44 +12,45 @@
 # Content-Type: application/json
 
 # {
-#     "name": "test",
-#     "email": "test@gmail.com",
-#     "password": "123"
+#     "name": "rfn",
+#     "email": "rayanirmala@gmail.com",
+#     "address": "jln. anggrek loka",
+#     "password": "nirmalaraya"
 # }
 
 # # # Account
 # # Endpoint GET All Account
-# GET http://localhost:3000/api/v1/account
+# GET http://localhost:3000/api/v1/accounts
 # Content-Type: application/json
 
 # # Endpoint GET Account
-# GET http://localhost:3000/api/v1/account/1
+# GET http://localhost:3000/api/v1/accounts/1
 # Content-Type: application/json
 
 # # Endpoint Create Account
-# POST http://localhost:3000/api/v1/account
+# POST http://localhost:3000/api/v1/accounts
 # Content-Type: application/json
 
 # {
-#     "id": "2",
-#     "bank": "bri"
+#     "id": 2,
+#     "bank": "bni"
 # }
 
 # # # Transaction
 # # Endpoint GET All Transaction
-# GET http://localhost:3000/api/v1/transaction
+# GET http://localhost:3000/api/v1/transactions
 # Content-Type: application/json
 
 # # Endpoint GET Transaction
-# GET http://localhost:3000/api/v1/transaction/1
+# GET http://localhost:3000/api/v1/transactions/1
 # Content-Type: application/json
 
 # # Endpoint Create Transaction
-# POST http://localhost:3000/api/v1/transaction
+# POST http://localhost:3000/api/v1/transactions
 # Content-Type: application/json
 
 # {
-#     "source": "1",
-#     "destination": "2",
-#     "amount": "10000"
+#     "source": 1,
+#     "destination": 2,
+#     "amount": 10000
 # }
