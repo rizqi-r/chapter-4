@@ -27,23 +27,23 @@ Content-Type: application/json
 # Account
 ## Endpoint GET All Account
 ```http
-GET http://localhost:3000/api/v1/account
+GET http://localhost:3000/api/v1/accounts
 Content-Type: application/json
 ```
 
 ## Endpoint GET Account
 ```http
-GET http://localhost:3000/api/v1/account/1
+GET http://localhost:3000/api/v1/accounts/1
 Content-Type: application/
 ```
 
 ## Endpoint Create Account
 ```http
-POST http://localhost:3000/api/v1/account
+POST http://localhost:3000/api/v1/accounts
 Content-Type: application/json
 
 {
-    "id": "2",
+    "id": 1,
     "bank": "bri"
 }
 ```
@@ -51,24 +51,24 @@ Content-Type: application/json
 # Transaction
 ## Endpoint GET All Transaction
 ```http
-GET http://localhost:3000/api/v1/transaction
+GET http://localhost:3000/api/v1/transactions
 Content-Type: application/json
 ```
 
 ## Endpoint GET Transaction
 ```http
-GET http://localhost:3000/api/v1/transaction/1
+GET http://localhost:3000/api/v1/transactions/1
 Content-Type: application/json
 ```
 
 ## Endpoint Create Transaction
 ```http
-POST http://localhost:3000/api/v1/transaction
+POST http://localhost:3000/api/v1/transactions
 Content-Type: application/json
 
 {
-    "source": "1",
-    "destination": "2",
+    "source": 1,
+    "destination": 2,
     "amount": "10000"
 }
 ```
